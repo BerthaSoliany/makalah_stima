@@ -1,0 +1,532 @@
+{
+  "title": "Mystic Messenger",
+  "description": "A character-based visual novel with multiple routes and endings",
+  "nodes": {
+    "start": {
+      "id": "start",
+      "title": "Mystic Messenger Chat",
+      "description": "You've joined the RFA chatroom. Several interesting members catch your attention. Who do you want to get closer to?",
+      "cgs": [],
+      "choices": [
+        {
+          "id": 1,
+          "text": "Focus on Jumin Han",
+          "destination": "jumin_route"
+        },
+        {
+          "id": 2,
+          "text": "Focus on 707 (Seven)",
+          "destination": "seven_route"
+        },
+        {
+          "id": 3,
+          "text": "Focus on Zen",
+          "destination": "zen_route"
+        }
+      ]
+    },    "jumin_route": {
+      "id": "jumin_route",
+      "title": "Getting to Know Jumin",
+      "description": "Jumin Han, the heir to C&R International. He seems cold but there's something intriguing about him.",
+      "cgs": ["jumin_intro"],
+      "choices": [
+        {
+          "id": 1,
+          "text": "Show interest in his business",
+          "destination": "jumin_business_path"
+        },
+        {
+          "id": 2,
+          "text": "Ask about Elizabeth 3rd",
+          "destination": "jumin_personal_path"
+        }
+      ]
+    },
+    "jumin_business_path": {
+      "id": "jumin_business_path",
+      "title": "Corporate Connection",
+      "description": "Jumin is impressed by your business acumen and invites you to his office.",
+      "cgs": ["jumin_office"],
+      "choices": [
+        {
+          "id": 1,
+          "text": "Discuss merger strategies",
+          "destination": "jumin_power_route"
+        },
+        {
+          "id": 2,
+          "text": "Ask about work-life balance",
+          "destination": "jumin_care_route"
+        }
+      ]
+    },
+    "jumin_personal_path": {
+      "id": "jumin_personal_path",
+      "title": "Personal Bond",
+      "description": "Jumin opens up about his beloved cat and his loneliness.",
+      "cgs": ["jumin_cat"],
+      "choices": [
+        {
+          "id": 1,
+          "text": "Offer to help with Elizabeth",
+          "destination": "jumin_care_route"
+        },
+        {
+          "id": 2,
+          "text": "Suggest he needs human connection",
+          "destination": "jumin_emotion_route"
+        }
+      ]
+    },
+    "jumin_power_route": {
+      "id": "jumin_power_route",
+      "title": "The Power Player",
+      "description": "You and Jumin form a powerful business alliance, but emotions remain distant.",
+      "cgs": [],
+      "choices": [
+        {
+          "id": 1,
+          "text": "Prioritize success together",
+          "destination": "jumin_normal_ending"
+        },
+        {
+          "id": 2,
+          "text": "Try to reach his heart",
+          "destination": "jumin_bad_ending"
+        }
+      ]
+    },
+    "jumin_care_route": {
+      "id": "jumin_care_route",
+      "title": "Caring Connection",
+      "description": "You show genuine care for both Jumin and Elizabeth, creating a warm atmosphere.",
+      "cgs": ["jumin_wine"],
+      "choices": [
+        {
+          "id": 1,
+          "text": "Express your feelings honestly",
+          "destination": "jumin_good_ending"
+        },
+        {
+          "id": 2,
+          "text": "Keep things professional",
+          "destination": "jumin_normal_ending"
+        }
+      ]
+    },
+    "jumin_emotion_route": {
+      "id": "jumin_emotion_route",
+      "title": "Emotional Breakthrough",
+      "description": "Jumin struggles with vulnerability but begins to open his heart.",
+      "cgs": ["jumin_confession"],
+      "choices": [
+        {
+          "id": 1,
+          "text": "Support his emotional growth",
+          "destination": "jumin_good_ending"
+        },
+        {
+          "id": 2,
+          "text": "Push him too hard",
+          "destination": "jumin_bad_ending"
+        }
+      ]
+    },
+    "jumin_good_ending": {
+      "id": "jumin_good_ending",
+      "title": "Jumin's Good Ending: Love and Success",
+      "description": "You and Jumin find perfect balance between love and ambition, creating a powerful partnership.",
+      "cgs": ["jumin_wedding"],
+      "choices": [],
+      "isEnding": true,
+      "endingType": "good"
+    },
+    "jumin_normal_ending": {
+      "id": "jumin_normal_ending",
+      "title": "Jumin's Normal Ending: Professional Partnership",
+      "description": "You maintain a successful but emotionally distant relationship with Jumin.",
+      "cgs": [],
+      "choices": [],
+      "isEnding": true,
+      "endingType": "normal"
+    },
+    "jumin_bad_ending": {
+      "id": "jumin_bad_ending",
+      "title": "Jumin's Bad Ending: Isolation",
+      "description": "Your approach backfires, causing Jumin to retreat further into isolation.",
+      "cgs": ["jumin_despair"],
+      "choices": [],
+      "isEnding": true,
+      "endingType": "bad"
+    },    "seven_route": {
+      "id": "seven_route",
+      "title": "Getting to Know Seven",
+      "description": "707, the mysterious hacker with a cheerful facade. But you sense there's more beneath the surface.",
+      "cgs": ["seven_intro"],
+      "choices": [
+        {
+          "id": 1,
+          "text": "Play along with his jokes",
+          "destination": "seven_fun_path"
+        },
+        {
+          "id": 2,
+          "text": "Try to be serious with him",
+          "destination": "seven_serious_path"
+        }
+      ]
+    },
+    "seven_fun_path": {
+      "id": "seven_fun_path",
+      "title": "Playful Connection",
+      "description": "Seven appreciates your humor and shows you his collection of fancy cars and gadgets.",
+      "cgs": ["seven_cars"],
+      "choices": [
+        {
+          "id": 1,
+          "text": "Ask about his hacking skills",
+          "destination": "seven_tech_route"
+        },
+        {
+          "id": 2,
+          "text": "Keep enjoying the fun side",
+          "destination": "seven_surface_route"
+        }
+      ]
+    },
+    "seven_serious_path": {
+      "id": "seven_serious_path",
+      "title": "Serious Approach",
+      "description": "Your serious attitude makes Seven drop his guard slightly, showing glimpses of his real self.",
+      "cgs": ["seven_emotional"],
+      "choices": [
+        {
+          "id": 1,
+          "text": "Press about his past",
+          "destination": "seven_investigation_route"
+        },
+        {
+          "id": 2,
+          "text": "Offer emotional support",
+          "destination": "seven_heart_route"
+        }
+      ]
+    },
+    "seven_tech_route": {
+      "id": "seven_tech_route",
+      "title": "Into the Digital World",
+      "description": "Seven brings you to his secret bunker, revealing his incredible hacking operation.",
+      "cgs": ["seven_bunker"],
+      "choices": [
+        {
+          "id": 1,
+          "text": "Wow, teach me to hack!",
+          "destination": "seven_normal_ending"
+        },
+        {
+          "id": 2,
+          "text": "What are you really working on?",
+          "destination": "seven_truth_revelation"
+        }
+      ]
+    },
+    "seven_surface_route": {
+      "id": "seven_surface_route",
+      "title": "Fun but Shallow",
+      "description": "You and Seven have great chemistry, but he never lets you see his deeper side.",
+      "cgs": [],
+      "choices": [
+        {
+          "id": 1,
+          "text": "This is enough for me",
+          "destination": "seven_normal_ending"
+        },
+        {
+          "id": 2,
+          "text": "I want to know the real you",
+          "destination": "seven_bad_ending"
+        }
+      ]
+    },
+    "seven_investigation_route": {
+      "id": "seven_investigation_route",
+      "title": "Dangerous Discovery",
+      "description": "Your investigation uncovers Seven's government agent identity and dangerous missions.",
+      "cgs": ["seven_truth", "seven_agency"],
+      "choices": [
+        {
+          "id": 1,
+          "text": "Fight alongside him",
+          "destination": "seven_secret_path"
+        },
+        {
+          "id": 2,
+          "text": "This is too dangerous for me",
+          "destination": "seven_bad_ending"
+        }
+      ]
+    },
+    "seven_heart_route": {
+      "id": "seven_heart_route",
+      "title": "Emotional Connection",
+      "description": "Seven opens up about his loneliness and the burden of his secret life.",
+      "cgs": ["seven_vulnerable"],
+      "choices": [
+        {
+          "id": 1,
+          "text": "Help him find balance",
+          "destination": "seven_good_ending"
+        },
+        {
+          "id": 2,
+          "text": "Encourage him to quit his job",
+          "destination": "seven_bad_ending"
+        }
+      ]
+    },
+    "seven_truth_revelation": {
+      "id": "seven_truth_revelation",
+      "title": "The Truth Unveiled",
+      "description": "Seven reveals his identity as a government agent, but trusts you with his secret.",
+      "cgs": ["seven_truth"],
+      "choices": [
+        {
+          "id": 1,
+          "text": "Support his mission",
+          "destination": "seven_good_ending"
+        },
+        {
+          "id": 2,
+          "text": "Ask to join the fight",
+          "destination": "seven_secret_path"
+        }
+      ]
+    },
+    "seven_secret_path": {
+      "id": "seven_secret_path",
+      "title": "The Secret Mission",
+      "description": "You join Seven in exposing a government conspiracy, knowing the personal cost.",
+      "cgs": [],
+      "choices": [
+        {
+          "id": 1,
+          "text": "Make the ultimate sacrifice together",
+          "destination": "seven_secret_ending"
+        }
+      ]
+    },
+    "seven_good_ending": {
+      "id": "seven_good_ending",
+      "title": "Seven's Good Ending: Happiness Found",
+      "description": "Seven learns to balance his duties with personal happiness, finding peace with you.",
+      "cgs": ["seven_happy"],
+      "choices": [],
+      "isEnding": true,
+      "endingType": "good"
+    },
+    "seven_bad_ending": {
+      "id": "seven_bad_ending",
+      "title": "Seven's Bad Ending: Forever Alone",
+      "description": "Seven disappears into his work, convinced he can never have normal relationships.",
+      "cgs": [],
+      "choices": [],
+      "isEnding": true,
+      "endingType": "bad"
+    },
+    "seven_normal_ending": {
+      "id": "seven_normal_ending",
+      "title": "Seven's Normal Ending: Surface Level",
+      "description": "You maintain a fun but shallow relationship, never truly knowing Seven's real self.",
+      "cgs": [],
+      "choices": [],
+      "isEnding": true,
+      "endingType": "normal"
+    },
+    "seven_secret_ending": {
+      "id": "seven_secret_ending",
+      "title": "Seven's Secret Ending: Ultimate Sacrifice",
+      "description": "You and Seven expose the conspiracy together, but pay the ultimate price for truth.",
+      "cgs": ["seven_sacrifice"],
+      "choices": [],
+      "isEnding": true,
+      "endingType": "secret"
+    },    "zen_route": {
+      "id": "zen_route",
+      "title": "Getting to Know Zen",
+      "description": "Zen, the narcissistic but passionate actor. His confidence is both charming and concerning.",
+      "cgs": ["zen_intro"],
+      "choices": [
+        {
+          "id": 1,
+          "text": "Compliment his looks",
+          "destination": "zen_ego_path"
+        },
+        {
+          "id": 2,
+          "text": "Focus on his acting talent",
+          "destination": "zen_talent_path"
+        }
+      ]
+    },
+    "zen_ego_path": {
+      "id": "zen_ego_path",
+      "title": "Feeding the Ego",
+      "description": "Zen loves the attention and shows off his modeling photos and motorcycle.",
+      "cgs": ["zen_motorcycle"],
+      "choices": [
+        {
+          "id": 1,
+          "text": "You're so photogenic!",
+          "destination": "zen_shallow_route"
+        },
+        {
+          "id": 2,
+          "text": "But what about your acting dreams?",
+          "destination": "zen_balance_route"
+        }
+      ]
+    },
+    "zen_talent_path": {
+      "id": "zen_talent_path",
+      "title": "Recognizing True Talent",
+      "description": "Zen is touched that you see beyond his looks and shows you his serious acting work.",
+      "cgs": ["zen_stage"],
+      "choices": [
+        {
+          "id": 1,
+          "text": "Help him practice for auditions",
+          "destination": "zen_support_route"
+        },
+        {
+          "id": 2,
+          "text": "Suggest he try method acting",
+          "destination": "zen_intense_route"
+        }
+      ]
+    },
+    "zen_shallow_route": {
+      "id": "zen_shallow_route",
+      "title": "All About Looks",
+      "description": "Your focus on his appearance inflates Zen's ego but doesn't help his career.",
+      "cgs": ["zen_mirror"],
+      "choices": [
+        {
+          "id": 1,
+          "text": "Maybe tone down the vanity?",
+          "destination": "zen_bad_ending"
+        },
+        {
+          "id": 2,
+          "text": "You're perfect as you are",
+          "destination": "zen_normal_ending"
+        }
+      ]
+    },
+    "zen_balance_route": {
+      "id": "zen_balance_route",
+      "title": "Beauty and Talent",
+      "description": "You help Zen find balance between confidence in his looks and dedication to his craft.",
+      "cgs": ["zen_rehearsal"],
+      "choices": [
+        {
+          "id": 1,
+          "text": "Support him through his big audition",
+          "destination": "zen_good_ending"
+        },
+        {
+          "id": 2,
+          "text": "Worry about his ego getting out of control",
+          "destination": "zen_normal_ending"
+        }
+      ]
+    },
+    "zen_support_route": {
+      "id": "zen_support_route",
+      "title": "Dedicated Support",
+      "description": "You become Zen's acting coach and biggest supporter, helping him improve.",
+      "cgs": ["zen_practice"],
+      "choices": [
+        {
+          "id": 1,
+          "text": "Push him to be his best",
+          "destination": "zen_good_ending"
+        },
+        {
+          "id": 2,
+          "text": "Maybe he's trying too hard",
+          "destination": "zen_normal_ending"
+        }
+      ]
+    },
+    "zen_intense_route": {
+      "id": "zen_intense_route",
+      "title": "Method Acting Madness",
+      "description": "Zen dives deep into method acting, but it unleashes his dangerous 'beast' side.",
+      "cgs": ["zen_beast"],
+      "choices": [
+        {
+          "id": 1,
+          "text": "Help him control his intensity",
+          "destination": "zen_good_ending"
+        },
+        {
+          "id": 2,
+          "text": "This is getting too intense",
+          "destination": "zen_bad_ending"
+        }
+      ]
+    },
+    "zen_good_ending": {
+      "id": "zen_good_ending",
+      "title": "Zen's Good Ending: Stardom and Love",
+      "description": "Zen achieves his dreams of stardom while balancing fame, talent, and love with you.",
+      "cgs": ["zen_success"],
+      "choices": [],
+      "isEnding": true,
+      "endingType": "good"
+    },
+    "zen_normal_ending": {
+      "id": "zen_normal_ending",
+      "title": "Zen's Normal Ending: Steady Relationship",
+      "description": "You maintain a stable relationship with Zen, though his ego sometimes causes issues.",
+      "cgs": [],
+      "choices": [],
+      "isEnding": true,
+      "endingType": "normal"
+    },
+    "zen_bad_ending": {
+      "id": "zen_bad_ending",
+      "title": "Zen's Bad Ending: Ego Destroyed",
+      "description": "Zen's confidence is shattered, leading to the end of both his acting career and your relationship.",
+      "cgs": [],
+      "choices": [],
+      "isEnding": true,
+      "endingType": "bad"
+    }
+  },  "cgDescriptions": {
+    "jumin_intro": "First meeting with the mysterious CEO Jumin",
+    "jumin_office": "Jumin's impressive corporate office with city view",
+    "jumin_cat": "Tender moment with Jumin and Elizabeth the 3rd",
+    "jumin_wine": "Elegant wine tasting scene with Jumin",
+    "jumin_confession": "Jumin's vulnerable confession about his feelings",
+    "jumin_wedding": "Beautiful wedding ceremony with Jumin",
+    "jumin_despair": "Jumin in despair after emotional rejection",
+    "seven_intro": "Meeting the quirky hacker Seven",
+    "seven_cars": "Seven showing off his collection of sports cars",
+    "seven_emotional": "Seven dropping his cheerful mask, showing vulnerability",
+    "seven_bunker": "Seven's secret underground bunker",
+    "seven_truth": "The revelation of Seven's true identity",
+    "seven_agency": "Secret government agency headquarters",
+    "seven_vulnerable": "Seven opening up about his loneliness",
+    "seven_happy": "Seven's genuine smile after finding happiness",
+    "seven_sacrifice": "Seven making the ultimate sacrifice",
+    "zen_intro": "Encounter with the narcissistic actor Zen",
+    "zen_motorcycle": "Zen posing with his motorcycle at sunset",
+    "zen_stage": "Zen performing on stage under spotlights",
+    "zen_mirror": "Zen admiring himself in the mirror",
+    "zen_rehearsal": "Zen practicing lines with passionate dedication",
+    "zen_practice": "Intensive acting practice session with Zen",
+    "zen_beast": "Zen's dangerous 'beast' side awakening during method acting",
+    "zen_success": "Zen achieving his dreams of stardom"
+  }
+}

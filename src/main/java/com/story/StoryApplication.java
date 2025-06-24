@@ -405,7 +405,7 @@ public class StoryApplication {
             String nodeId = nodeSequence.get(i);
             StoryNode node = story.getNode(nodeId);
             
-            System.out.println("\u001B[44m"+"▶ STEP " + (i + 1) + ": " + node.getTitle()+ "\u001B[0m");
+            System.out.println("\u001B[44m"+"|> STEP " + (i + 1) + ": " + node.getTitle()+ "\u001B[0m");
             
             // Show CGs collected at this node
             if (!node.getCgs().isEmpty()) {

@@ -1,5 +1,5 @@
 # Finding an Optimal Path to a Desired Ending with Maximum CGs in Otome Game Using Backtracking
-A Java implementation of a backtracking algorithm for finding optimal paths in branching narrative structures (visual novels/interactive fiction). The system uses a **character-based route structure** where users first select a character, then choose their desired ending type to find the optimal path with maximum CG collection. In this program, we're using Mystic Messenger character to make the simulation more real.
+A Java implementation of a backtracking algorithm for finding optimal paths in branching narrative structures (visual novels). The system uses a **character-based route structure** where users first select a character, then choose their desired ending type to find the optimal path with maximum CG collection. In this program, we're using Mystic Messenger character to make the simulation more real.
 
 
 ## Table of Content
